@@ -113,9 +113,9 @@
     	function sendData(formObj) {
         	var myFirebaseRef = new Firebase("https://project-90ba1.firebaseio.com/");
         	myFirebaseRef.push({
-          	name: formObj.a.value,
-          	email: formObj.b.value,
-          	message: formObj.c.value
+          	name: formObj.name.value,
+          	email: formObj.email.value,
+          	message: formObj.message.value
         	}, onMessageComplete);
         	sendBtn.disabled = true;
         	return false;
