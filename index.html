@@ -39,6 +39,7 @@
 					console.log(error.code);
 					console.log(error.message);
 				});
+		}
 		function logoutFacebook(){
 			firebase.auth().signOut()
 			.then(function(){
@@ -46,7 +47,6 @@
 			}, function(error){
 				console.log('Signout failed')
 			});
-		}
 		}
 	</script>
     
