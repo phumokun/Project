@@ -62,7 +62,7 @@
           					<td>NAME:</td>
           						<td>
             						<div class="mdl-textfield mdl-js-textfield">
-              							<input class="mdl-textfield__input" type="text" id="name" id="name">
+              							<input class="mdl-textfield__input" type="text" id="name" id="a">
               							<label class="mdl-textfield__label" for="name">Your Full Name...</label>
             						</div>
           						</td>
@@ -71,7 +71,7 @@
           					<td>Email:</td>
           						<td>
             						<div class="mdl-textfield mdl-js-textfield">
-              							<input class="mdl-textfield__input" type="email" name="email" id="email">
+              							<input class="mdl-textfield__input" type="email" name="email" id="b">
               							<label class="mdl-textfield__label" for="email">Your Email Address...</label>
             						</div>
           						</td>
@@ -80,7 +80,7 @@
           					<td>Message:</td>
           						<td>
            							<div class="mdl-textfield mdl-js-textfield"> 
-              						<textarea class="mdl-textfield__input" type="text" rows="4" id="message" id="message"></textarea>
+              						<textarea class="mdl-textfield__input" type="text" rows="4" id="message" id="c"></textarea>
               						<label class="mdl-textfield__label" for="message">Your Message...</label>
             						</div>
                                     <br/>
@@ -113,9 +113,9 @@
     	function sendData(formObj) {
         	var myFirebaseRef = new Firebase("https://project-90ba1.firebaseio.com/");
         	myFirebaseRef.push({
-          	name: formObj.name.value,
-          	email: formObj.email.value,
-          	message: formObj.message.value
+          	name: formObj.a.value,
+          	email: formObj.b.value,
+          	message: formObj.c.value
         	}, onMessageComplete);
         	sendBtn.disabled = true;
         	return false;
