@@ -13,6 +13,7 @@
   </head>
   <body>
   	<button type="button" name="button" onClick="facebookSignin()">Login Your Facebook</button>
+    <button type="button" name="button" onClick="logoutFacebook()">Log out</button>
 	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
 	<script>
   	// Initialize Firebase
@@ -38,6 +39,14 @@
 					console.log(error.code);
 					console.log(error.message);
 				});
+		function logoutFacebook(){
+			firebase.auth().signOut()
+			.then(function(){
+				console.log('Signout successful!')
+			}, function(error){
+				console.log('Signout failed')
+			});
+		}
 		}
 	</script>
     
