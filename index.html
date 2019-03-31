@@ -63,7 +63,7 @@
           						<td>
             						<div class="mdl-textfield mdl-js-textfield">
               							<input class="mdl-textfield__input" type="text" id="name" id="name">
-              							<label class="mdl-textfield__label" for="name">Your Full Name...</label>
+              							<label class="mdl-textfield__label" for="name1">Your Full Name...</label>
             						</div>
           						</td>
         					</tr>
@@ -72,7 +72,7 @@
           						<td>
             						<div class="mdl-textfield mdl-js-textfield">
               							<input class="mdl-textfield__input" type="email" name="email" id="email">
-              							<label class="mdl-textfield__label" for="email">Your Email Address...</label>
+              							<label class="mdl-textfield__label" for="email1">Your Email Address...</label>
             						</div>
           						</td>
         					</tr>
@@ -81,7 +81,7 @@
           						<td>
            							<div class="mdl-textfield mdl-js-textfield"> 
               						<textarea class="mdl-textfield__input" type="text" rows="4" id="message" id="message"></textarea>
-              						<label class="mdl-textfield__label" for="message">Your Message...</label>
+              						<label class="mdl-textfield__label" for="message1">Your Message...</label>
             						</div>
                                     <br/>
         						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="send-data" type="submit" >Submit Data</button>
@@ -113,9 +113,9 @@
     	function sendData(formObj) {
         	var myFirebaseRef = new Firebase("https://project-90ba1.firebaseio.com/");
         	myFirebaseRef.push({
-          	name1: formObj.name.value,
-          	email1: formObj.email.value,
-          	message1: formObj.message.value
+          	name: formObj.name.value,
+          	email: formObj.email.value,
+          	message: formObj.message.value
         	}, onMessageComplete);
         	sendBtn.disabled = true;
         	return false;
